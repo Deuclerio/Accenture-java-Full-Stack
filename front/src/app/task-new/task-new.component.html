@@ -1,0 +1,16 @@
+<div>
+    <h3>Cadastro de Tarefa</h3>
+  </div>
+  <form class="example-container" [formGroup]="TaskForm" (ngSubmit)="addTask(TaskForm.value)">
+    <mat-form-field>
+      <input matInput name="description" placeholder="Nome da Tarefa" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="sn_done" placeholder="Concluido" formControlName="sn_done">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="item" placeholder="Codigo da lista" formControlName="item">
+    </mat-form-field>
+  
+    <button type="submit" [disabled]="!TaskForm.valid" mat-button color="primary" >Salvar</button>
+</form>
